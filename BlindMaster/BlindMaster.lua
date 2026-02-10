@@ -191,7 +191,7 @@ function StateKick:Enter()
     self.context:SetAnimation("Attack_Kick")
 end
 
--- Ray-Box Intersection Logic (원본 복원)
+-- 진행 방향이 벽면의 어느 위치에 부딪혔는지 계산
 function StateKick:CalculateZoneBorderPos(pos, center, extents, dir)
     local min_x, max_x = center.x - extents.x, center.x + extents.x
     local min_z, max_z = center.z - extents.z, center.z + extents.z
